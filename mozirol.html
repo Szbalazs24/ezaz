@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szopi Mozi</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="proba.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row focim">
+            <div class="col-sm-4 col-md-4 col-lg-4 d-flex align-items-center">
+                <ul class="na d-flex gap-2 p-0 m-0">
+                    <li><a class="gomb" href="./index.html">Főoldal</a></li>
+                    <li><a class="gomb" href="#">Moziról</a></li>
+                    <li><a class="gomb" href="./index.html#filmek">Filmek</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <h2>A mozinkról</h2>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <img src="./cinema.webp" class="kosar-icon" alt="">
+            </div>
+        </div>
+
+        <div class="row kep justify-content-center">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <img src="mozi_kivul.jpg" class="img-fluid w-75 h-auto d-block mx-auto kep1" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <section>
+                    <h2>Rólunk</h2>
+                    <hr>
+                    <p><strong>Mozi</strong> nem csupán egy vetítőterem – ez egy közösségi tér, ahol a filmek iránti szenvedély és az élmények iránti vágy találkozik.</p>
+                    <p>Modern vetítéstechnológia, otthonos belső tér, kényelmes fotelek és kiváló akusztika várja a nézőket. Az álomból valóság lett – és most örömmel osztjuk meg veletek is!</p>
+
+                    <hr>
+                    <h3>Helyszín</h3>
+                    <p>Moziink a város szívében, a főtér közelében található – egy hely, ahol a régi városmag hangulata és a modern kultúra összeér.</p>
+
+                    <hr>
+                    <h3>Filmkínálat</h3>
+                    <p><strong>Szopi Mozi</strong> nemcsak a legújabb blockbustereket kínálja, hanem klasszikusokat, független filmeket, dokumentumfilmeket és tematikus filmnapokat is.</p>
+                    <p>A büfénkben frissen pattogatott kukorica, kézműves üdítők és helyi pékáruk kaphatók – mert hiszünk benne, hogy egy jó filmélmény a részleteken múlik.</p>
+                </section>
+
+                <section>
+                    <h2>Csapatunk</h2>
+                    <hr>
+
+                    <div class="team-member">
+                        <h3>Orbán Viktor – Alapító és Üzemeltető</h3>
+                        <p>A mozi szellemi atyja, akinek szenvedélye a filmek iránt már gyerekkorában elkezdődött. Kiemelt figyelmet fordít a közönségélményre és a mozi kulturális szerepére.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <h3>Kristóf Sebestyén Pál – Műszaki Vezető</h3>
+                        <p>A technológia mestere, aki biztosítja, hogy a mozi a legmodernebb vetítési és akusztikai élményt nyújtsa.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <h3>Gyurcsány Ferenc – Programkoordinátor</h3>
+                        <p>Ő felel a közönségtalálkozók, tematikus estek és különleges programok szervezéséért – mindig elérhető a látogatók számára.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <h3>Magyar Péter – Rendszergazda</h3>
+                        <p>A háttér hőse, aki gondoskodik arról, hogy minden technikai részlet zökkenőmentesen működjön a vetítések során.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let keplista = ["mozi_kivul.jpg", "belso_mozi.jpg", "belso_mozi2.jpg", "masik_terem.jpg", "masik_terem2.jpg", "masik_terem3.jpg"];
+        let i = 0;
+        let timeLeft = 3;
+        
+        function elore() {
+            i++;
+            if (i == 6) {
+                i = 0;
+            }
+            timeLeft = 3;
+            document.querySelector(".kep1").src = keplista[i];
+        }
+
+        function hatra() {
+            i--;
+            if (i == -1) {
+                i = 5;
+            }
+            timeLeft = 3;
+            document.querySelector(".kep1").src = keplista[i];
+        }
+
+        function ido() {
+            timeLeft = 3;
+            const countdown = setInterval(function () {
+                timeLeft--;
+                if (timeLeft < 0) {
+                    i++;
+                    clearInterval(countdown);
+                    if (i == 6) {
+                        i = 0;
+                    }
+                    document.querySelector(".kep1").src = keplista[i];
+                    clearInterval(countdown);
+                    ido();
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            ido();
+        };
+    </script>
+</body>
+</html>

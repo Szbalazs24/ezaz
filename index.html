@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szopi Mozi</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="proba.js"></script>
+</head>
+
+<body>
+    <div id="kosar_div" class="kosar">
+        <button type="button" class="bezarasgomb" onclick="kosarb()" >X</button>
+        <ol id="kosaram">
+
+        </ol>
+        <p id="vegosszeg"></p>
+
+    </div>
+    <div class="container-fluid">
+        <div class="row focim">
+            <div class="col-sm-4 col-md-4 col-lg-4 ">
+                <ul class="na">
+                    <li><a class="bold" href="#bev">Főoldal</a></li>
+                    <li><a href="./mozirol.html">Moziról</a></li>
+                    <li><a href="#filmek">Filmek</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 ">
+                <h2>Mozi</h2>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4"><img src="./kosar.png" class="" onclick="kosarmeg(), kosarm()"
+                    alt=""></div>
+        </div>
+        <div class="row kep ">
+            <div class="col-md-2 col-lg-2 ide"> <img src="./dot-arrowfor.png" onclick="hatra()" class="hatra" alt="">
+            </div>
+            <div class="col-md-8 col-lg-8 kep0 d-flex justify-content-center align-items-center"><img
+                    src="mozi_kivul.jpg" class="img kep1 img-fluid w-75 h-75 d-block valtk mx-auto " alt=""></div>
+            <div class="col-md-2 col-lg-2 ide"><img src="./dot-arrow.png" onclick="elore()" class="elore" alt=""></div>
+
+        </div>
+        <div class="row filmek">
+            <h4 id="filmek" class="musoron">Műsoron</h4>
+            <div class="col-1 d-flex align-items-center">
+                <button type="button" class="btn btn-light" onclick="teker(1)">&#10094;</button>
+            </div>
+            <div class="col-10 overflow-auto px-0" id="tekc" style="white-space: nowrap;">
+                <img src="film_img/gbu.jfif" class="img-thumbnail me-2" onclick="megnyitas(0)"
+                    style="width: 150px; height: auto;" alt="">
+                <img src="film_img/awm.jfif" class="img-thumbnail me-2" onclick="megnyitas(1)"
+                    style="width: 150px; height: auto;" alt="">
+                <img src="film_img/au.jfif" class="img-thumbnail me-2" onclick="megnyitas(2)"
+                    style="width: 150px; height: auto;" alt="">
+                <img src="film_img/hh.jfif" class="img-thumbnail me-2" onclick="megnyitas(3)"
+                    style="width: 150px; height: auto;" alt="">
+                <img src="film_img/js.jfif" class="img-thumbnail me-2" onclick="megnyitas(4)"
+                    style="width: 150px; height: auto;" alt="">
+                <img src="film_img/ls.jfif" class="img-thumbnail me-2" onclick="megnyitas(5)"
+                    style="width: 150px; height: auto;" alt="">
+                <img src="film_img/minecraft.jfif" class="img-thumbnail me-2" onclick="megnyitas(6)"
+                    style="width: 150px; height: auto;" alt="">
+                <img src="film_img/thegodfather.jfif" class="img-thumbnail me-2" onclick="megnyitas(7)"
+                    style="width: 150px; height: auto;" alt="">
+            </div>
+            <div class="col-1 d-flex align-items-center">
+                <button type="button" onclick="teker(2)" class="btn btn-light">&#10095;</button>
+            </div>
+        </div>
+        <div class="row sr">
+            <div class="col-md-4 col-lg-4">
+                <img class="img0" src="" alt="">
+            </div>
+            <div class="col-md-8 col-lg-8">
+                <h1 class="h10">
+
+                </h1>
+                <p class="p0">
+                </p>
+            </div>
+            <div class="row eltunik">
+                <div>
+                    <div class="container-fluid jegyfoglalás">
+
+                        <div class="row jr">
+                            <div class="jegydiv">
+                                <table class="jegyek">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p>Normál jegy (3000Ft):</p>
+                                            </td>
+                                            <td><input class="" type="number" name="normal" id="normalid" min="0"
+                                                    max="zindex"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Diák jegy (2000Ft):</p>
+                                            </td>
+                                            <td><input class="" type="number" name="normal" id="diakid" min="0"
+                                                    max="zindex"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Nyugdíjas jegy (1500Ft):</p>
+                                            </td>
+                                            <td><input class="" type="number" name="normal" id="nyugid" min="0"
+                                                    max="zindex"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button id="tovabb" class="gomb" onclick="tovabbgomb()">Tovább</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p id="vu">Válasszon ülőhelyet!</p>
+                            <div class="col-md-6 col-lg-6">
+                                <table class="balt">
+                                    <tbody class="szekek"></tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <table class="jobbt">
+                                    <tbody class="szekek1"></tbody>
+                                </table>
+                            </div>
+                            <button id="vissza" class="gomb" onclick="vissza()">Vissza</button>
+                            <button id="vasarlas" class="gomb" onclick="kosarba()">Kosárba</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var jegyektipusa = ""
+            class Jegy {
+                constructor(film_neve, tipus, ar, mennyiseg, ulesek, szama) {
+                    this.film_neve = film_neve
+                    this.tipus = tipus
+                    this.ar = ar
+                    this.mennyiseg = mennyiseg
+                    this.ulesek = ulesek
+                    this.szama = megnyitasx
+
+                }
+            }
+            var kosar = []
+            function kosarba() {
+                jegyektipusa = ""
+                if (norm != 0 || null) {
+                    jegyektipusa += `Normál x${norm} (3000Ft), `
+                }
+                if (diak != 0 || null) {
+                    jegyektipusa += `Diák x${diak} (2000Ft), `
+                }
+                if (nyug != 0 || null) {
+                    jegyektipusa += `Nyugdíjas x${nyug} (1500Ft), `
+                }
+                if (vasarolhat && kivalasztott.length == diak + norm + nyug) {
+                    var z = ""
+                    for (var i = 0; i < kivalasztott.length; i++) {
+                        z += `${kivalasztott[i]}, `
+                    }
+                    kosar.push(new Jegy(film_neve, jegyektipusa, (diak * 2000) + (norm * 3000) + (nyug * 1500), nyug + norm + diak, z, megnyitasx))
+                    kosarm()
+                    for (var i = 0; i < kivalasztott.length; i++) {
+                        if (kivalasztott[i] < (zindex / 2)) {
+                            document.querySelector(`.ezoszlop${kivalasztott[i]}`).style.backgroundColor = "red";
+
+                        }
+                        else {
+                            document.querySelector(`.e1zoszlop${kivalasztott[i]}`).style.backgroundColor = "red";
+                        }
+                        pirosak[megnyitasx].push(kivalasztott[i])
+                    }
+                    vasarolhat = false
+                    kivalasztott = []
+                }
+                else {
+                    alert("Kérem válasszon ülőhelyet!")
+                }
+
+
+            }
+            function kosarb() {
+                document.querySelector("#kosar_div").style.display = "none"
+            }
+            function kosarmeg() {
+                document.querySelector("#kosar_div").style.display = "block"
+
+            }
+            let osszeg
+            function kosarm() {
+                osszeg = 0
+                const ul = document.getElementById("kosaram")
+                ul.innerHTML = ""
+                kosar.forEach((item, index) => {
+                    osszeg += item.ar
+                    const elem = document.createElement("li")
+                    elem.classList.add("kosarli")
+                    elem.textContent = `${index + 1}. ${item.film_neve} ${item.tipus} ${item.ar}Ft ${item.mennyiseg}DB ülések: ${item.ulesek}`
+                    const torlesg = document.createElement("button")
+                    torlesg.textContent = "Törlés"
+                    torlesg.classList.add("torlesg")
+                    elem.style.display = "flex"
+                    elem.style.justifyContent = "space-between"
+                    elem.style.alignItems = "center"
+                    torlesg.onclick = () => {
+                        var felosztottules = []
+                        felosztott = kosar[index].ulesek
+                            .split(",")
+                            .map(u => u.trim())
+                            .filter(u => u !== "")
+                        if (felosztott.length > 0) {
+                            felosztottules.push(felosztott)
+                        }
+                        felosztott.forEach(szam => {
+                            const idx = pirosak[megnyitasx].indexOf(parseInt(szam));
+                            if (idx !== -1) {
+                                pirosak[megnyitasx].splice(idx, 1);
+                            }
+                        });
+                        szinezo()
+                        kosar.splice(index, 1)
+                        kosarm()
+                    }
+                    elem.appendChild(torlesg)
+                    ul.appendChild(elem)
+                })
+                vegosszeg.innerHTML = `Végösszeg: ${osszeg}Ft <button onclick="fizetes()">Vásárlás</button>`
+
+
+
+
+            }
+
+            function fizetes(){
+                if(osszeg<=penzosszeg){
+                    penzosszeg-=osszeg
+                    alert("Köszönjük a vásárlást!")
+                    kosar = []
+                    kosarm()
+                }
+                else{
+                    alert("Nem áll rendelkezésre elég összeg!")
+                }
+
+            }
+
+            var soros = 0
+            var oszlopos = 0
+            var szin = 0
+            var film_neve = ""
+            var ar = 0
+            var mennyiseg = 0
+            var osszesen = 0
+            var megnyitasx = 0
+
+            
+            function megnyitas(x) {
+
+                document.querySelector(".eltunik").style.display = "block"
+                vissza()
+                megnyitasx = x
+                document.querySelector(".p0").innerHTML = szovegek[x]
+                document.querySelector(".img0").src = imgk[x]
+                document.querySelector(".h10").innerHTML = cim[x]
+                soros = sor[x]
+                oszlopos = oszlop[x]
+                szin = 0
+                film_neve = cim[x];
+
+            }
+
+            function teker(x) {
+                const container = document.getElementById("tekc")
+
+                if (x == 1) {
+                    container.scrollBy({ left: -200, behavior: "smooth" })
+                }
+                else {
+                    container.scrollBy({ left: 200, behavior: "smooth" })
+                }
+
+            }
+            var penzosszeg = 0
+            window.onload = function () {
+                penzosszeg = parseInt(prompt("Adja meg a rendelkezésre álló összeget: "))
+                ido()
+                oszlopbetoltes()
+            }
+            function tovabbgomb() {
+                kivalaszt()
+                if ((diak + nyug + norm) == 0 || null) {
+                    alert("Kérem válasszon előbb jegyet!")
+                }
+                else {
+                    jegygen()
+                    jegygen1()
+                }
+
+            }
+
+
+            var zindex = 0
+            function jegygen() {
+
+                zindex = 0
+                var szekek = document.querySelector(".szekek")
+                szekek.innerHTML = ""
+                for (var i = 0; i < soros; i++) {
+                    szekek.innerHTML += `<tr class='ezsor${i} s'></tr>`
+
+                    for (var j = 0; j < oszlopos; j++) {
+                        document.querySelector(`.ezsor${i}`).innerHTML += `<td value="${zindex}" onclick="klikk(${zindex})" class=' ezoszlop${zindex} o'>${zindex}</td>`
+                        zindex++
+                    }
+                }
+
+            }
+
+            function jegygen1() {
+
+                var szekek = document.querySelector(".szekek1")
+                szekek.innerHTML = ""
+                for (var i = 0; i < soros; i++) {
+                    szekek.innerHTML += `<tr class='e1zsor${i} s'></tr>`
+
+                    for (var j = 0; j < oszlopos; j++) {
+                        document.querySelector(`.e1zsor${i}`).innerHTML += `<td value="${zindex}" onclick="klikk(${zindex})" class=' e1zoszlop${zindex} e1zoszlopaz${i} o'>${zindex}</td>`
+                        zindex++
+                    }
+                }
+                var hozzadadp = []
+                var hozzadadz = []
+                for (var i = 0; i < zindex; i++) {
+                    if (i < soros * oszlopos) {
+                        if (Math.floor(Math.random() * (100 - 1 + 1)) + 1 < 30) {
+                            //document.querySelector(`.ezoszlop${i}`).style.backgroundColor = "red"
+                            pirosak[megnyitasx].push(i)
+                        }
+                        else {
+                            //document.querySelector(`.ezoszlop${i}`).style.backgroundColor = "green"
+                            hozzadadz.push(i)
+                        }
+                    }
+                    else {
+                        if (Math.floor(Math.random() * (100 - 1 + 1)) + 1 > 30) {
+                            //document.querySelector(`.e1zoszlop${i}`).style.backgroundColor = "red"
+                            pirosak[megnyitasx].push(i)
+                        }
+                        else {
+                            //document.querySelector(`.e1zoszlop${i}`).style.backgroundColor = "green"
+                            hozzadadz.push(i)
+                        }
+                    }
+
+                }
+
+                
+                zoldek.push(hozzadadz)
+                szinezo()
+                document.querySelector("#tovabb").style.display = "none"
+                document.querySelector("#vissza").style.display = "block"
+                document.querySelector(".jegyek").style.display = "none"
+                document.querySelector("#vasarlas").style.display = "block"
+                document.querySelector("#vu").style.display = "block"
+                document.querySelector(".balt").style.display = "block"
+                document.querySelector(".jobbt").style.display = "block"
+            }
+
+            function szinezo() {
+                for (var i = 0; i < zindex; i++) {
+                    if (i < (zindex / 2)) {
+                        if (pirosak[megnyitasx].includes(i)) {
+                            document.querySelector(`.ezoszlop${i}`).style.backgroundColor = "red";
+
+                        }
+                        else {
+                            document.querySelector(`.ezoszlop${i}`).style.backgroundColor = "green";
+                        }
+                    }
+                    else {
+                        if (pirosak[megnyitasx].includes(i)) {
+                            document.querySelector(`.e1zoszlop${i}`).style.backgroundColor = "red";
+
+                        }
+                        else {
+                            document.querySelector(`.e1zoszlop${i}`).style.backgroundColor = "green";
+                        }
+                    }
+                }
+            }
+
+            function vissza() {
+                for (var i = 0; i < kivalasztott.length; i++) {
+                    if (kivalasztott[i] <= (zindex / 2)) {
+                        document.querySelector(`.ezoszlop${kivalasztott[i]}`).style.backgroundColor = "green"
+                    }
+                    else {
+                        document.querySelector(`.e1zoszlop${kivalasztott[i]}`).style.backgroundColor = "green"
+                    }
+                }
+                kivalasztott = [];
+                vasarolhat = false
+                katt = 0
+                document.querySelector("#tovabb").style.display = "block"
+                document.querySelector("#vissza").style.display = "none"
+                document.querySelector(".jegyek").style.display = "block"
+                document.querySelector("#vasarlas").style.display = "none"
+                document.querySelector("#vu").style.display = "none"
+                document.querySelector(".balt").style.display = "none"
+                document.querySelector(".jobbt").style.display = "none"
+            }
+
+            var diak = 0
+            var nyug = 0
+            var norm = 0
+
+            function kivalaszt() {
+                diak = parseInt(document.querySelector("#diakid").value) || 0
+                nyug = parseInt(document.querySelector("#nyugid").value) || 0
+                norm = parseInt(document.querySelector("#normalid").value) || 0
+            }
+            var kivalasztott = []
+            var katt = 0
+            var vasarolhat = false
+            function klikk(x) {
+                kivalaszt()
+                var ossz = diak + nyug + norm
+                if ((x <= (zindex / 2) && ossz > katt) || ((kivalasztott.includes(x) && pirosak[megnyitasx].includes(x) == false) && x <= (zindex / 2))) {
+                    if (document.querySelector(`.ezoszlop${x}`).style.backgroundColor != "red" && document.querySelector(`.ezoszlop${x}`).style.backgroundColor != "grey") {
+                        document.querySelector(`.ezoszlop${x}`).style.backgroundColor = "grey"
+                        katt++
+                        kivalasztott.push(x)
+                        vasarolhat = true
+                    }
+                    else if (kivalasztott.includes(x)) {
+                        document.querySelector(`.ezoszlop${x}`).style.backgroundColor = "green"
+                        katt--
+                        const index = kivalasztott.indexOf(x);
+                        kivalasztott.splice(index, 1);
+                    }
+
+                }
+                else if ((x > (zindex / 2) && ossz > katt) || ((kivalasztott.includes(x) && pirosak[megnyitasx].includes(x) == false) && x > (zindex / 2))) {
+                    if (document.querySelector(`.e1zoszlop${x}`).style.backgroundColor != "red" && document.querySelector(`.e1zoszlop${x}`).style.backgroundColor != "grey") {
+                        document.querySelector(`.e1zoszlop${x}`).style.backgroundColor = "grey"
+                        katt++
+                        kivalasztott.push(x)
+                        vasarolhat = true
+                    }
+                    else if (kivalasztott.includes(x)) {
+                        document.querySelector(`.e1zoszlop${x}`).style.backgroundColor = "green"
+                        katt--
+                        const index = kivalasztott.indexOf(x)
+                        kivalasztott.splice(index, 1)
+                    }
+
+                }
+            }
+
+
+            keplista = ["mozi_kivul.jpg", "belso_mozi.jpg", "belso_mozi2.jpg", "masik_terem.jpg", "masik_terem2.jpg", "masik_terem3.jpg"]
+
+            function elore() {
+                i++;
+                if (i == 6) {
+                    i = 0
+                }
+                timeLeft = 3
+                document.querySelector(".kep1").src = keplista[i]
+            }
+
+            function hatra() {
+                i--;
+                if (i == -1) {
+                    i = 5
+                }
+                timeLeft = 3
+                document.querySelector(".kep1").src = keplista[i]
+            }
+
+
+            let i = 0;
+            let timeLeft = 3;
+            function ido() {
+
+
+
+                timeLeft = 3
+                const countdown = setInterval(function () {
+
+                    timeLeft--
+
+                    if (timeLeft < 0) {
+                        i++
+                        clearInterval(countdown)
+                        if (i == 6) {
+                            i = 0
+                        }
+                        document.querySelector(".kep1").src = keplista[i]
+
+                        ido()
+                    }
+                }, 1000);
+            }
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+body {
+    background-color: black;
+}
+
+.focim {
+    padding: 5px;
+    border-bottom: 2px solid;
+}
+
+.focim h2 {
+    text-align: center;
+    color: white;
+
+    transform: translateY(50%);
+}
+
+.focim img {
+    width: 4rem;
+    height: 4rem;
+    overflow-y: auto;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    float: right;
+}
+
+.na {
+    transform: translateY(40%);
+
+    list-style-type: none;
+    margin: 0;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.na a:hover {
+    background-image: linear-gradient(90deg, rgb(25, 8, 179), rgb(86, 76, 182), rgb(25, 8, 179));
+
+    box-shadow: rgba(255, 255, 255, 0.795) 0px 19px 10px, rgba(255, 255, 255, 0.589) 0px 15px 12px;
+
+}
+
+.na a {
+    padding: 6px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+    border: 2px solid rgba(161, 161, 161, 0.637);
+    border-radius: 7%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.na li {
+    margin: 0px 5px 0px 5px;
+    display: inline;
+}
+
+
+
+.ide {
+    position: relative;
+}
+
+.hatra {
+    cursor: pointer;
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hatra:hover {
+    animation: move 2s infinite ease;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateX(-20px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+}
+
+.elore {
+    cursor: pointer;
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.o {
+    background-color: white;
+}
+
+.elore:hover {
+    animation: move1 2s infinite ease;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateX(20px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+}
+
+td {
+    padding: 10px;
+}
+
+.balt {
+    float: right;
+}
+
+input {
+    width: 40%;
+}
+
+.jegyek {
+    margin: auto;
+}
+
+
+.jegyek p {
+    color: white;
+    vertical-align: bottom;
+}
+
+#tekc {
+    padding: 10px;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#tekc::-webkit-scrollbar {
+    display: none;
+}
+
+#tekc img {
+    transition: transform 0.3s;
+}
+
+#tekc img:hover {
+    transform: scale(1.05);
+}
+
+.filmek {
+    padding-top: 10px;
+    border-top: 1px solid white;
+}
+
+.musoron {
+    color: white;
+}
+
+.p0 {
+    color: white;
+    text-align: justify;
+}
+
+.h10 {
+    text-align: center;
+    color: white;
+}
+
+.img0 {
+    display: block;
+    margin: auto;
+}
+
+.sr {
+    padding: 20px;
+}
+
+#vissza,
+#vasarlas {
+    margin: 10px auto auto auto;
+    display: none;
+    width: 10%;
+}
+
+.jegydiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jr {
+    margin-top: 10px;
+}
+
+#vu {
+    display: none;
+    color: white;
+    text-align: center;
+}
+
+.eltunik {
+    display: none;
+}
+
+#kosar_div {
+    display: none;
+    z-index: 10;
+    text-align: left;
+    max-height: 8rem;
+    overflow-y: auto;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: white;
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 350px;
+}
+
+@media only screen and (max-width: 720px) {
+    #kosar_div {
+        position: inherit;
+        margin: 10px;
+    }
+}
+
+.kosarli {
+    border-bottom: 2px solid black;
+}
+
+.gomb {
+    padding: 6px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid rgba(161, 161, 161, 0.637);
+    border-radius: 7%;
+
+    background-color: black;
+}
+
+.gomb:hover{
+    background-image: linear-gradient(90deg, rgb(25, 8, 179), rgb(86, 76, 182), rgb(25, 8, 179));
+    box-shadow: rgba(255, 255, 255, 0.795) 0px 10px 8px, rgba(255, 255, 255, 0.589) 0px 10px 12px;
+}
+.bezarasgomb{
+    background-color: none;
+    border: none;
+}

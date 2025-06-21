@@ -1,0 +1,135 @@
+body {
+    background-color: black;
+    color: #ffffff;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+.focim {
+    padding: 25px;
+    border-bottom: 2px solid #444;
+    margin-bottom: 30px;
+}
+
+.focim h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.focim img {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+
+
+.na {
+    transform: translateY(40%);
+
+    list-style-type: none;
+    margin: 0;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.na a {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+
+.na a:hover {
+    background-image: linear-gradient(90deg, rgb(25, 8, 179), rgb(86, 76, 182), rgb(25, 8, 179));
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    margin-bottom: 30px;
+    background-color: #2d2d2d;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+section h2, section h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #555;
+    margin: 30px 0;
+}
+
+.team-member {
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #666;
+    padding-bottom: 20px;
+}
+
+.team-member:last-child {
+    border-bottom: none;
+}
+
+.team-member h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.gomb {
+    padding: 6px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background-color: black;
+    border: 2px solid rgba(161, 161, 161, 0.637);
+    border-radius: 7%;
+    display: inline-block;
+    margin: 10px 5px;
+    font-size: 1rem;
+    width: auto;
+}
+
+.gomb:hover {
+    background-image: linear-gradient(90deg, rgb(25, 8, 179), rgb(86, 76, 182), rgb(25, 8, 179));
+    box-shadow: rgba(255, 255, 255, 0.795) 0px 10px 8px, rgba(255, 255, 255, 0.589) 0px 10px 12px;
+}
+
+
+
+.bezarasgomb {
+    background-color: none;
+    border: none;
+}
